@@ -12,17 +12,18 @@
     "build": "qwik build",
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
+    "build.server": "vite build -c adapters/vercel-edge/vite.config.ts",
     "build.types": "tsc --incremental --noEmit",
-    "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
+    "deploy": "vercel deploy",
     "dev": "vite --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check .",
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
+    "psh": "git add -A && git commit -m \"saved & pushed by pnpm\" && git push",
     "start": "vite --open --mode ssr",
-    "qwik": "qwik",
-    "psh": "git add -A && git commit -m \"saved & pushed by pnpm\" && git push"
+    "qwik": "qwik"
   },
   "devDependencies": {
     "@builder.io/qwik": "^1.2.17",
@@ -37,13 +38,13 @@
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.4",
+    "sass": "^1.69.5",
     "tailwindcss": "3.3.3",
     "typescript": "^5.2.2",
     "undici": "^5.26.0",
+    "vercel": "^29.1.1",
     "vite": "^4.4.11",
-    "vite-tsconfig-paths": "^4.2.1",
-    "sass": "^1.69.5"
+    "vite-tsconfig-paths": "^4.2.1"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
