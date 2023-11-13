@@ -1,0 +1,21 @@
+@import "../global.scss";
+
+.center {
+  @apply flex items-center justify-center;
+}
+
+.jk {
+  @apply center roboto-mono relative min-h-screen text-5xl;
+}
+
+.wrap {
+  @apply center absolute top-0 w-full;
+}
+
+// .mainLink {
+//   @apply flex h-24 w-12 cursor-pointer items-center justify-center;
+// }
+
+// .linkBall {
+//   @apply trans inline-block h-2 w-2 rounded-full bg-gray-100 group-hover:scale-150 group-hover:bg-black;
+// }
