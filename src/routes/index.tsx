@@ -64,11 +64,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: "JsonKody",
   meta: [
     {
       name: "description",
-      content: "Qwik site description",
+      content: "JsonKody web implemented in Qwik.",
     },
   ],
 };
